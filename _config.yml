@@ -79,4 +79,4 @@ theme: MiccallTheme
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/caijinhong/blog.git
+  repo: https://github.com/caijinhong/Blog.git
