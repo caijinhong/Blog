@@ -1,0 +1,50 @@
+        <div id="intro">
+            <h1>This is <%- theme.Intro.name %> </h1>
+            <p> <%- theme.Intro.slogan %></p>
+            <ul class="timedemo">
+                <li>
+                    <span id="timeday">356</span>
+                </li>
+                <li>
+                    <span  id="hours">12</span>                    
+                </li>
+                <li>
+                    <span id="minutes">60</span>                    
+                </li>
+                <li>
+                    <span id="seconds">60</span>                    
+                </li>
+            </ul>
+            <ul class="actions">
+                <li><a href="#header" class="button icon solo fa-arrow-down scrolly">Continue</a></li>
+            </ul>
+        </div>
+        <script>     
+            //倒计时
+            function setTimer() {
+                var date=new Date;
+                var year = date.getFullYear();//通过日期对象的getFullYear()方法返回年
+                var leftTime = (new Date(year,12,31,24,0,0)) - (new Date()); //计算剩余的毫秒数 
+				var days = parseInt(leftTime / 1000 / 60 / 60 / 24 , 10); //计算剩余的天数 
+				var hours = parseInt(leftTime / 1000 / 60 / 60 % 24 , 10); //计算剩余的小时 
+				var minutes = parseInt(leftTime / 1000 / 60 % 60, 10);//计算剩余的分钟 
+                var seconds = parseInt(leftTime / 1000 % 60, 10);//计算剩余的秒数           
+                days = checkTime(days);
+                hours = checkTime(hours);
+                minutes = checkTime(minutes);
+                seconds = checkTime(seconds);
+                $("#timeday").text(days)
+                $("#hours").text(hours)
+                $("#minutes").text(minutes)
+                $("#seconds").text(seconds)
+            }
+            // 如果分钟或小时的值小于10，则在其值前加0
+            function checkTime(i) {
+                if (i < 10) {
+                    i = "0" + i;
+                }
+                return i;
+            }
+            //每秒循环一次，刷新活动截止时间与当前时间的时间差
+            var id = setInterval(setTimer, 1000);
+            </script>
