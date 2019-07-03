@@ -4,7 +4,7 @@
 
 # Head info
 head:
-    favicon: "/img/logo_miccall.png"
+    favicon: "img/logo_miccall.png"
     keywords: miccall
     backgroundpic : "img/bg2.jpeg"
     pattern: "img/pattern.png"
@@ -29,20 +29,20 @@ Nav:
         
     pages:
         简介: 
-            link: "/about/"
+            link: "about/"
         标签:
-            link: "/tag/"
+            link: "tag/"
         # 团队 :
         #     link: "/group/"
         图库 :
-            link: "/gallery/"
+            link: "gallery/"
         #自定义标签名
         #   link：“路径”
 
 MainFirst:
     name: Miccall Metro
     description: Technical  Artist  of  Games   
-    pic_url: /images/me.jpg
+    pic_url: images/me.jpg
     goto_ulr: ""
 
 Gallery :
